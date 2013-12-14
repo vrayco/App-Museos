@@ -32,7 +32,7 @@ public class StartActivity extends Activity {
 	            e.printStackTrace();
 	        }
 	        try {
-	            startActivity(new Intent(StartActivity.this,MainActivity.class));
+	            startActivity(new Intent(StartActivity.this,MuseosListViewActivity.class));
 	            finish();
 	        } catch (Exception e) {
 	            // TODO: handle exception

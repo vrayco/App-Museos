@@ -9,5 +9,10 @@
     <color name="white">#FFFFFF</color>
 
     <string name="title_activity_main">Museos de Tenerife</string>
+    <string name="title_activity_list_view">ListViewActivity</string>
+    <string name="title_activity_museo">MuseoActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
 
 </resources>
