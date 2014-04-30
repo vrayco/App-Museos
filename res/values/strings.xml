@@ -2,6 +2,21 @@
 <resources>
 
     <string name="app_name">Museos de Tenerife</string>
-    <string name="title_museo_detail">Museo Detail</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_museo">MuseoActivity</string>
+    <string name="title_section1">EL MUSEO</string>
+    <string name="title_section2">HORARIOS Y TARIFAS</string>
+    <string name="title_activity_ejemplo">EJEMPLOActivity</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_eventos">EventosActivity</string>
+    <string name="title_activity_ir">IrActivity</string>
+    <string name="titulo_horario">Horario</string>
+    <string name="titulo_tarifas">Tarifas</string>
+    <string name="titulo_eventos">PRÓXIMOS EVENTOS</string>
+    <string name="title_activity_item_evento">ItemEventoActivity</string>
+    <string name="contentDescripcionFotografiaMuseo">Fotografía del museo</string>
+    <string name="contentDescripcionFotografiaEvento">Fotografía del evento</string>
+    <string name="contentDescripcionLogotipoMuseo">Logotipo del museo</string>
 
 </resources>

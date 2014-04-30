@@ -1,34 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.museosdetenerife.app"
+    package="org.museosdetenerife"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="11"
-        android:targetSdkVersion="19" />
+        android:minSdkVersion="13"
+        android:targetSdkVersion="18" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/icon2"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="org.museosdetenerife.app.MuseoListActivity"
+            android:name="org.museosdetenerife.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="org.museosdetenerife.app.MuseoDetailActivity"
-            android:label="@string/title_museo_detail"
-            android:parentActivityName=".MuseoListActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MuseoListActivity" />
+            android:name="org.museosdetenerife.MuseoActivity"
+            android:label="@string/title_activity_museo"
+            android:parentActivityName="org.museosdetenerife.MainActivity" >
+        </activity>
+        <activity
+            android:name="org.museosdetenerife.HistoriaListActivity"
+            android:label="@string/title_activity_museo"
+            android:parentActivityName="org.museosdetenerife.MainActivity" >
+        </activity>
+        <activity
+            android:name="org.museosdetenerife.EventosActivity"
+            android:label="@string/title_activity_eventos"
+            android:parentActivityName="org.museosdetenerife.MainActivity" >
+        </activity>
+        <activity
+            android:name="org.museosdetenerife.IrActivity"
+            android:label="@string/title_activity_ir"
+            android:parentActivityName="org.museosdetenerife.MainActivity" >
+        </activity>
+        <activity
+            android:name="org.museosdetenerife.ItemEventoActivity"
+            android:label="@string/title_activity_item_evento" >
         </activity>
     </application>
 

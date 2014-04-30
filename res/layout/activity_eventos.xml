@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="0dp"
+    android:background="#fff" >
+    
+    <TextView 
+        android:id="@+id/titulo_eventos"
+        android:text="@string/titulo_eventos"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:background="#ccc"
+        android:gravity="center"
+        android:textSize="12sp" />
+	<View
+        android:id="@+id/separator1"
+ 		android:layout_width="fill_parent"
+ 		android:layout_height="5dp"
+ 		android:layout_below="@+id/titulo_eventos"
+ 		android:background="#5d9732"/>
+    
+    
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/separator1" >
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="0dp"
+		    android:layout_marginRight="0dp"
+		    >
+		    
+	        <fragment
+		        android:name="org.museosdetenerife.EventosListaFragment"
+		        android:id="@+id/fragment_eventos"
+		   		android:layout_width="match_parent"
+		   		android:layout_height="700dp" />	       
+	
+	    
+	    </RelativeLayout>
+    </ScrollView>
+    
+    <include layout="@layout/toolbar"/>
+</RelativeLayout>

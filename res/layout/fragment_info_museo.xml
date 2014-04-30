@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="0dp"
+    android:background="#fff"
+    tools:context=".MuseoActivity$DummySectionFragment" >
+    
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        >
+	
+	        <ImageView
+	            android:id="@+id/foto_museo"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="0dp"
+	            android:adjustViewBounds="true"
+	            android:contentDescription="@string/contentDescripcionFotografiaMuseo"
+	            android:src="@drawable/museodelascienciasyelcosmos" />
+		    
+		     <TextView
+		        android:id="@+id/texto_info"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="16dp"
+		        android:layout_marginRight="16dp"
+		        android:paddingBottom="70dp"
+		        android:paddingTop="10dp"
+		        android:textSize="15sp"
+		        
+		         />
+	
+	    
+	    </LinearLayout>
+    </ScrollView>
+    
+    <include layout="@layout/toolbar"/>
+</RelativeLayout>

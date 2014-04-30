@@ -13,8 +13,16 @@
     </style>
 
     <!-- Application theme. -->
-    <style name="AppTheme" parent="AppBaseTheme">
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    
+<!--     <style name="Theme_Hombre" parent="@android:style/Theme.Holo.Light"> -->
+<!--         <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Hombre</item> -->
+<!--     </style> -->
+
+<!--     <style name="ActionBarTabStyle.Hombre" parent="@android:style/Widget.Holo.Light.ActionBar.TabView"> -->
+<!--         <item name="android:background">@drawable/tab_indicator_ab_hombre</item> -->
+<!--     </style>     -->
 
 </resources>

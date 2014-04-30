@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="0dp"
+    android:background="#fff"
+    tools:context=".MuseoActivity$DummySectionFragment" >
+        
+    <ImageView
+        android:id="@+id/foto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mapa" >
+    </ImageView>
+    
+    <include layout="@layout/toolbar"/>
+</RelativeLayout>
