@@ -18,5 +18,6 @@
     <string name="contentDescripcionFotografiaMuseo">Fotografía del museo</string>
     <string name="contentDescripcionFotografiaEvento">Fotografía del evento</string>
     <string name="contentDescripcionLogotipoMuseo">Logotipo del museo</string>
+    <string name="title_activity_mapa_">Mapa_Activity</string>
 
 </resources>

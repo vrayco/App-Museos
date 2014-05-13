@@ -6,12 +6,5 @@
     android:background="#fff"
     tools:context=".MuseoActivity$DummySectionFragment" >
         
-    <ImageView
-        android:id="@+id/foto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/mapa" >
-    </ImageView>
-    
     <include layout="@layout/toolbar"/>
 </RelativeLayout>
