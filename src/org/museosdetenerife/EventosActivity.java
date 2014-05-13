@@ -1,10 +1,18 @@
 package org.museosdetenerife;
 
+import get.data.rss.DownloadRSS;
+import get.data.rss.ImportRSSMuseos;
+import get.data.rss.Item;
+import get.data.rss.RSS_Map;
+
+import java.util.ArrayList;
+
 import android.os.Bundle;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.app.ListActivity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.app.FragmentManager;
@@ -60,9 +68,29 @@ public class EventosActivity extends Activity {
 	
 	public void selectFrag(View view) {
 
-		 Fragment fr;		 
+		 Fragment fr;
+		 Context context = this.getApplicationContext();
 			
-		 fr = new EventosListaFragment(id_museo);
+		 EventosListaFragment.id_museo = id_museo;
+		 
+		 DownloadRSS d_rss = null;
+		 ImportRSSMuseos rss_info = null;
+		 RSS_Map rss_map = null;
+		
+		 try {
+		 	d_rss = new DownloadRSS(context);
+		 	rss_info = new ImportRSSMuseos(d_rss.getRSSFile());
+		 } catch (Exception e) {
+		 	e.printStackTrace();
+		 }
+		
+		 rss_map = new RSS_Map(rss_info.getListaEventos());
+		
+		 ArrayList<Item> lista_eventos_museo = rss_map.getListaCompletaEventosMuseo(id_museo);
+		 
+		 EventosListaFragment.lista_eventos_museo1 = lista_eventos_museo;
+		 
+		 fr = new EventosListaFragment();
 		 
 		 android.app.FragmentManager fm = getFragmentManager();
 	     FragmentTransaction fragmentTransaction = fm.beginTransaction();

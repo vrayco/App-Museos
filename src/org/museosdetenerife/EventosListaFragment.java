@@ -1,5 +1,11 @@
 package org.museosdetenerife;
 
+import java.util.ArrayList;
+
+import get.data.rss.DownloadRSS;
+import get.data.rss.ImportRSSMuseos;
+import get.data.rss.RSS_Map;
+import get.data.rss.Item;
 import android.app.Fragment;
 import android.app.ListFragment;
 import android.content.Intent;
@@ -15,13 +21,14 @@ import android.widget.ListView;
 public class EventosListaFragment extends ListFragment {
 	
 	static String id_museo = null;
-	
+	static ArrayList<Item> lista_eventos_museo1 = null;
+		
 	@Override
 	  public void onActivityCreated(Bundle savedInstanceState) {
 	    super.onActivityCreated(savedInstanceState);
+	   
 		
 	    String[] values = new String[] { "Evento 1", "Evento 2", "Evento 3", "Evento 4" };
-
 	    setListAdapter(new EventosArrayAdapter(getActivity(), values));
 	  }
 
