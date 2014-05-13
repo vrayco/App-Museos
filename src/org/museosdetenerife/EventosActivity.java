@@ -11,17 +11,11 @@ import android.os.Bundle;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.FragmentTransaction;
-import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.support.v4.app.FragmentManager;
 import android.view.Menu;
 import android.view.View;
-import android.widget.ListView;
-import android.widget.TextView;
 import android.app.Fragment;
-import android.app.FragmentTransaction;
 
 public class EventosActivity extends Activity {
 	
@@ -52,7 +46,7 @@ public class EventosActivity extends Activity {
 		if(titulo.containsKeySubtitulo(id_museo))
 			actionBar.setSubtitle(titulo.getSubtitulo(id_museo));
 		
-		View separator = (View) findViewById(R.id.separator1);
+		View separator = findViewById(R.id.separator1);
 
 		if(id_museo.equals("5") || id_museo.equals("7") || id_museo.equals("12"))
 			separator.setBackgroundColor(0XFFB50937);

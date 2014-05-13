@@ -2,20 +2,11 @@ package org.museosdetenerife;
 
 import java.util.ArrayList;
 
-import get.data.rss.DownloadRSS;
-import get.data.rss.ImportRSSMuseos;
-import get.data.rss.RSS_Map;
 import get.data.rss.Item;
-import android.app.Fragment;
 import android.app.ListFragment;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class EventosListaFragment extends ListFragment {
