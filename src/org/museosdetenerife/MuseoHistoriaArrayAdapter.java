@@ -31,13 +31,13 @@ public class MuseoHistoriaArrayAdapter extends ArrayAdapter<String> {
 		// Change icon based on name
 		String s = values[position];
   
-		if (s.equals("HISTORIA1")) {
+		if (s.equals("5")) {
 			imageView.setImageResource(R.drawable.foto_mha_lercaro);
 			imageView2.setImageResource(R.drawable.logotipo_mha_casa_lecaro);
-		} else if (s.equals("HISTORIA2")) {
+		} else if (s.equals("7")) {
 			imageView.setImageResource(R.drawable.foto_mha_carta);
 			imageView2.setImageResource(R.drawable.logotipo_mha_casa_de_carta);
-		} else if (s.equals("HISTORIA3")) {
+		} else if (s.equals("12")) {
 			imageView.setImageResource(R.drawable.foto_mha_castillo);
 			imageView2.setImageResource(R.drawable.logotipo_mha_castillo_san_cristobal);
 		}

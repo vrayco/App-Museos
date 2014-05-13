@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 public class HistoriaListActivity extends ListActivity {
 	
-static final String[] MUSEOS_HISTORIA = new String[] { "HISTORIA1", "HISTORIA2", "HISTORIA3" };
+static final String[] MUSEOS_HISTORIA = new String[] { "5", "7", "12" };
 	
 
 	@Override

@@ -14,6 +14,7 @@ import android.widget.ListView;
 
 public class EventosListaFragment extends ListFragment {
 	
+	static String id_museo = null;
 	
 	@Override
 	  public void onActivityCreated(Bundle savedInstanceState) {
@@ -35,5 +36,10 @@ public class EventosListaFragment extends ListFragment {
 		  intent.putExtra("subtitulo", "SUBTITULO EVENTO");
 		  intent.putExtra("contenido", "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque viverra nisi, id varius nisl dapibus eget. Aenean ac nisi quis est tincidunt euismod et at magna. Fusce nunc leo, mollis lobortis tincidunt nec, varius bibendum diam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam hendrerit rhoncus erat, lacinia vulputate neque blandit quis. Aenean ultrices viverra risus eget hendrerit. Morbi libero odio, ullamcorper sit amet hendrerit id, consectetur eu justo.</p>");
 		  startActivity(intent);
+	  }
+	  
+	  public static void setIdMuseo(String _id_museo)
+	  {
+		  id_museo = _id_museo;
 	  }
 }

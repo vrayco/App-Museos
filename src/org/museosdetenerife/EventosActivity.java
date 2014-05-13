@@ -17,9 +17,14 @@ import android.app.FragmentTransaction;
 
 public class EventosActivity extends Activity {
 	
-	String id_museo;
+	static String id_museo;
+	static String nombre = null;
+	static String latitud = null;
+	static String longitud = null;
 
-	static final String[] MUSEOS = new String[] { "HISTORIA", "COSMOS", "HOMBRE", "CEDOCAM" };
+	//static final String[] MUSEOS = new String[] { "HISTORIA", "COSMOS", "HOMBRE", "CEDOCAM" };
+	
+	static final String[] MUSEOS = new String[] { "6", "1", "9" , "12" , "5" , "7" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,23 +33,26 @@ public class EventosActivity extends Activity {
 		
 		Intent intent = getIntent();
 		id_museo = intent.getStringExtra("ID");
+		nombre = intent.getStringExtra("nombre");
+		latitud = intent.getStringExtra("latitud");
+		longitud = intent.getStringExtra("longitud");
 		
 		final ActionBar actionBar = getActionBar();
 
-		Titulos titulo = new Titulos();
+		DatosEstaticos titulo = new DatosEstaticos();
 		actionBar.setTitle(titulo.getTitulo(id_museo));
 		if(titulo.containsKeySubtitulo(id_museo))
 			actionBar.setSubtitle(titulo.getSubtitulo(id_museo));
 		
 		View separator = (View) findViewById(R.id.separator1);
 
-		if(id_museo.equals("HISTORIA1") || id_museo.equals("HISTORIA2") || id_museo.equals("HISTORIA3"))
+		if(id_museo.equals("5") || id_museo.equals("7") || id_museo.equals("12"))
 			separator.setBackgroundColor(0XFFB50937);
-		else if(id_museo.equals("COSMOS"))
+		else if(id_museo.equals("6"))
 			separator.setBackgroundColor(0XFFFFAB18);
-		else if(id_museo.equals("HOMBRE"))
+		else if(id_museo.equals("1"))
 			separator.setBackgroundColor(0XFF5D9732);
-		else if(id_museo.equals("CEDOCAM"))
+		else if(id_museo.equals("9"))
 			separator.setBackgroundColor(0XFF1D5FAD);
 
 		 
@@ -54,7 +62,7 @@ public class EventosActivity extends Activity {
 
 		 Fragment fr;		 
 			
-		 fr = new EventosListaFragment();		
+		 fr = new EventosListaFragment(id_museo);
 		 
 		 android.app.FragmentManager fm = getFragmentManager();
 	     FragmentTransaction fragmentTransaction = fm.beginTransaction();
@@ -85,6 +93,9 @@ public class EventosActivity extends Activity {
 		
 		intent = new Intent(this, EventosActivity.class);
 		intent.putExtra("ID", id_museo);
+		intent.putExtra("latitud",latitud);
+		intent.putExtra("longitud",longitud);
+		intent.putExtra("nombre", nombre);
 			
 		startActivity(intent);
 	}
@@ -94,6 +105,9 @@ public class EventosActivity extends Activity {
 		
 		intent = new Intent(this, IrActivity.class);
 		intent.putExtra("ID", id_museo);
+		intent.putExtra("latitud",latitud);
+		intent.putExtra("longitud",longitud);
+		intent.putExtra("nombre", nombre);
 			
 		startActivity(intent);
 	}

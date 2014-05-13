@@ -58,16 +58,20 @@ public class IrActivity extends FragmentActivity implements LocationListener
 	
 	public GoogleMap mapa = null;
 	
-	private int vista = 0;
+	public double latitud = 28.489514;
+	public double longitud = -16.314971;
+	
+	public String nombre = "Museo X";
+	//private int vista = 0;
 	
 	public LatLng myPosition; 
 	
-	public LatLng M_LERCARO = new LatLng( 28.489514, -16.314971);
-	public LatLng M_COSMOS = new LatLng( 28.476029, -16.309120);
-	public LatLng M_NATURALEZA = new LatLng( 28.463834, -16.249156);
-	public LatLng M_CEDOCAM = new LatLng( 28.490367, -16.314537);
-	public LatLng M_CASTILLO = new LatLng( 28.467866, -16.247182);
-	public LatLng M_CARTA = new LatLng( 28.514245, -16.390116);
+//	public LatLng M_LERCARO = new LatLng( 28.489514, -16.314971);
+//	public LatLng M_COSMOS = new LatLng( 28.476029, -16.309120);
+//	public LatLng M_NATURALEZA = new LatLng( 28.463834, -16.249156);
+//	public LatLng M_CEDOCAM = new LatLng( 28.490367, -16.314537);
+//	public LatLng M_CASTILLO = new LatLng( 28.467866, -16.247182);
+//	public LatLng M_CARTA = new LatLng( 28.514245, -16.390116);
 	
 	String id_museo;
 
@@ -75,6 +79,11 @@ public class IrActivity extends FragmentActivity implements LocationListener
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ir);
+		
+		Intent intent = getIntent();
+		latitud = intent.getDoubleExtra("latitud",28.489514);
+		longitud = intent.getDoubleExtra("longitud",-16.314971);
+		nombre = intent.getStringExtra("nombre");
 		
 		// Getting Google Play availability status
         int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getBaseContext());
@@ -168,8 +177,8 @@ public class IrActivity extends FragmentActivity implements LocationListener
 	
 	private void onInfoWindowClick() {
 		// TODO Auto-generated method stub
-		double lat = 28.489514;
-		double longi = -16.314971;
+		double lat = latitud;
+		double longi = longitud;
 		
 		LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         
@@ -195,7 +204,7 @@ public class IrActivity extends FragmentActivity implements LocationListener
 		.position(myPosition)
 		.title("Estas aquí"));
 */		 
-		Uri geoLocation = Uri.parse("geo:0,0?q="+lat+","+longi+"(mUSEO lERCARO)");
+		Uri geoLocation = Uri.parse("geo:0,0?q="+lat+","+longi+"("+nombre+")");
 		Intent intent = new Intent(Intent.ACTION_VIEW);
 		intent.setData(geoLocation);
 

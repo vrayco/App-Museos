@@ -16,7 +16,14 @@ import android.widget.TextView;
 
 public class MainActivity extends ListActivity {
 	
-static final String[] MUSEOS = new String[] { "HISTORIA", "COSMOS", "HOMBRE", "CEDOCAM" };
+	//static final String[] MUSEOS = new String[] { "HISTORIA", "COSMOS", "HOMBRE", "CEDOCAM" };
+	
+	static final String[] MUSEOS = new String[] { "11", "6", "1", "9" };
+	
+	// Historia = 8
+	// Cosmos = 6
+	// Hombre = 1
+	// Cedecam = 9
 	
 
 	@Override
@@ -41,8 +48,10 @@ static final String[] MUSEOS = new String[] { "HISTORIA", "COSMOS", "HOMBRE", "C
 		//get selected items
 		String selectedValue = (String) getListAdapter().getItem(position);
 		
+		System.err.println("Select value:" + selectedValue);
+		
 		Intent intent;
-		if(selectedValue.equals("HISTORIA")){
+		if(selectedValue.equals("11")){
 			intent = new Intent(this, HistoriaListActivity.class);
 		} else {
 			intent = new Intent(this, MuseoActivity.class);
